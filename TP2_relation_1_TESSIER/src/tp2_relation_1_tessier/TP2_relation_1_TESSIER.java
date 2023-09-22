@@ -35,11 +35,12 @@ Voiture uneMicra = new Voiture ("Micra", "Nissan", 4 ) ;
         une2008.proprio = reno;
         uneMicra.proprio = reno;
         bob.ajouter_voiture(une2007);
-        for (int i = 0; i<bob.liste_voitures.length;i++){
+        for (int i = 0; i<bob.nbVoitures;i++){
             System.out.println("la voiture "+i+" de bob est "+bob.liste_voitures[i]);
         }
-        for (int i = 0; i<reno.liste_voitures.length;i++){
+        for (int i = 0; i<reno.nbVoitures;i++){
             System.out.println("la voiture "+i+" de reno est "+reno.liste_voitures[i]);
+          
         }
        
     }
