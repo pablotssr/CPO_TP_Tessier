@@ -37,6 +37,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         btn_col_5.setVisible(false);
         btn_col_6.setVisible(false);
         taunt.setVisible(false);
+        tauntpanel.setVisible(false);
                             
         for (int i = 5; i >= 0; i--) {
             for (int j = 0; j < 7; j++) {
@@ -121,6 +122,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private void initComponents() {
 
         taunt = new javax.swing.JLabel();
+        tauntpanel = new javax.swing.JPanel();
         panneau_grille = new javax.swing.JPanel();
         panneau_creation_partie = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -172,6 +174,10 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         taunt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(taunt, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 130, 540, 220));
         taunt.getAccessibleContext().setAccessibleParent(null);
+
+        tauntpanel.setBackground(new java.awt.Color(204, 204, 204));
+        tauntpanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 153, 0), new java.awt.Color(0, 51, 255), new java.awt.Color(255, 153, 153), new java.awt.Color(51, 153, 0)));
+        getContentPane().add(tauntpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 570, 160));
 
         panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
         panneau_grille.setLayout(new java.awt.GridLayout(6, 7));
@@ -472,11 +478,14 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         // Check if the random number is less than or equal to 30
         if (randomNumber <= 30) {
             taunt.setVisible(true); // Make the label visible
+                    tauntpanel.setVisible(true);
 
             Timer timer = new Timer(1000, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    taunt.setVisible(false); // After 2 seconds, make it invisible again
+                    taunt.setVisible(false); 
+        tauntpanel.setVisible(false);
+// After 2 seconds, make it invisible again
                 }
             });
             timer.setRepeats(false); // This ensures the timer only runs once
@@ -699,6 +708,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JPanel panneau_info_joueurs;
     private javax.swing.JPanel panneau_win;
     private javax.swing.JLabel taunt;
+    private javax.swing.JPanel tauntpanel;
     private javax.swing.JTextArea textemessage;
     // End of variables declaration//GEN-END:variables
 }

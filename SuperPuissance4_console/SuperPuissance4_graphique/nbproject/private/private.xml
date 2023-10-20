@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/pablo/Downloads/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/fenetreDeJeu.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/Grille.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/Partie.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/fenetreDeJeu.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/CelluleGraphique.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/Jeton.java</file>
+            <file>file:/C:/Users/pablo/Documents/GitHub/CPO_TP_Tessier/SuperPuissance4_console/SuperPuissance4_graphique/src/superpuissance4_console/Cellule.java</file>
         </group>
     </open-files>
 </project-private>
