@@ -4,8 +4,11 @@
  */
 package superpuissance4_console;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 import java.util.Scanner;
+import javax.swing.Timer;
 
 /**
  *
@@ -33,6 +36,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         btn_col_4.setVisible(false);
         btn_col_5.setVisible(false);
         btn_col_6.setVisible(false);
+        taunt.setVisible(false);
                             
         for (int i = 5; i >= 0; i--) {
             for (int j = 0; j < 7; j++) {
@@ -116,6 +120,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        taunt = new javax.swing.JLabel();
         panneau_grille = new javax.swing.JPanel();
         panneau_creation_partie = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -159,6 +164,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        taunt.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
+        taunt.setForeground(new java.awt.Color(255, 51, 153));
+        taunt.setText("MOUV DE CLÉBARD XD");
+        getContentPane().add(taunt, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 130, 590, 420));
+        taunt.getAccessibleContext().setAccessibleParent(null);
 
         panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
         panneau_grille.setLayout(new java.awt.GridLayout(6, 7));
@@ -451,6 +462,24 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         boolean resultatAction;
 
         resultatAction = grilleDeJeu.ajouterJetonDansColonne(JoueurCourant, indice_colonne);
+        Random random = new Random();
+        
+        // Generate a random number between 0 and 99
+        int randomNumber = random.nextInt(100);
+        
+        // Check if the random number is less than or equal to 30
+        if (randomNumber <= 30) {
+            taunt.setVisible(true); // Make the label visible
+
+            Timer timer = new Timer(1000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    taunt.setVisible(false); // After 2 seconds, make it invisible again
+                }
+            });
+            timer.setRepeats(false); // This ensures the timer only runs once
+            timer.start();
+        } 
         panneau_grille.repaint();
         lbl_j1_desint.setText(Listejoueurs[0].nombreDesintegrateurs + "");
         lbl_j2_desint.setText(Listejoueurs[1].nombreDesintegrateurs + "");
@@ -667,6 +696,7 @@ public class fenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JPanel panneau_info_jeu;
     private javax.swing.JPanel panneau_info_joueurs;
     private javax.swing.JPanel panneau_win;
+    private javax.swing.JLabel taunt;
     private javax.swing.JTextArea textemessage;
     // End of variables declaration//GEN-END:variables
 }
