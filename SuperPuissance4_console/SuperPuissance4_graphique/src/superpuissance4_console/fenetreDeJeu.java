@@ -165,10 +165,12 @@ public class fenetreDeJeu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        taunt.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
-        taunt.setForeground(new java.awt.Color(255, 51, 153));
+        taunt.setBackground(new java.awt.Color(153, 255, 51));
+        taunt.setFont(new java.awt.Font("Comic Sans MS", 0, 48)); // NOI18N
+        taunt.setForeground(new java.awt.Color(0, 255, 255));
         taunt.setText("MOUV DE CLÉBARD XD");
-        getContentPane().add(taunt, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 130, 590, 420));
+        taunt.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(taunt, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 130, 540, 220));
         taunt.getAccessibleContext().setAccessibleParent(null);
 
         panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
